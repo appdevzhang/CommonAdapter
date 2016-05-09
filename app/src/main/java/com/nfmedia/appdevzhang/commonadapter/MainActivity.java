@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
                 R.layout.adapter_item) {
             @Override
             public void convert(CommonViewHolder helper, String item) {
-                TextView title = (TextView) findViewById(R.id.id_tv_title);
+                TextView title = helper.getView(R.id.id_tv_title);
                 title.setText(item);
             }
         });
