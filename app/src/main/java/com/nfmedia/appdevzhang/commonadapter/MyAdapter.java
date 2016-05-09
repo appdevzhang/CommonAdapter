@@ -12,18 +12,22 @@ import java.util.List;
 /**
  * Created by appdevzhang on 16/5/3.
  */
-public class MyAdapter extends BaseAdapter {
+public class MyAdapter extends CommonAdapter {
 
-    private LayoutInflater mLayoutInflater;
+//    private LayoutInflater mLayoutInflater;
     private Context mContext;
     private List<String> mDatas;
 
     public MyAdapter(Context context, List<String> datas) {
+        /*
         mLayoutInflater = LayoutInflater.from(context);
         mContext = context;
         mDatas = datas;
+        */
+        super(context,datas);
     }
 
+    /*
     @Override
     public int getCount() {
         return mDatas.size();
@@ -38,6 +42,7 @@ public class MyAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
+    */
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

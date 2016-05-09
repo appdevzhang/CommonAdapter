@@ -12,11 +12,13 @@ import android.view.ViewGroup;
 public class CommonViewHolder {
 
     private final SparseArray<View> mViews;
+    private int mPosition;
     private View mConvertView;
 
     public CommonViewHolder(Context context, ViewGroup parent,int layoutId,int position) {
+        this.mPosition = position;
         this.mViews = new SparseArray<View>();
-        mConvertView = LayoutInflater.from(context).inflate(layoutId,parent,false);
+        this.mConvertView = LayoutInflater.from(context).inflate(layoutId,parent,false);
         mConvertView.setTag(this);
     }
 
